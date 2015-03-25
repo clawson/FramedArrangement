@@ -27,8 +27,8 @@
 
     // This pair of commands will also trim the mainFrame
     // But it does it as a whole
-    self.mainFrame = self.view.bounds;
-    self.mainFrame = CGRectInset(self.mainFrame, 10, 10);
+    self.fullFrame = self.view.bounds;
+    self.fullFrame = CGRectInset(self.fullFrame, 10, 10);
     
 //    self.redView = [[UIView alloc] initWithFrame:self.part1];
 //    self.redView.backgroundColor = [UIColor redColor];
@@ -80,24 +80,24 @@
     CGRect part3;
     CGRect part4;
     
-    CGFloat height = self.mainFrame.size.height / 4.0;
+    CGFloat height = self.fullFrame.size.height / 4.0;
     
-    CGRectDivide(self.mainFrame, &part1, &_mainFrame, height, CGRectMaxYEdge);
+    CGRectDivide(self.fullFrame, &part1, &_fullFrame, height, CGRectMaxYEdge);
     self.redView = [[UIView alloc] initWithFrame:part1];
     self.redView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.redView];
 
-    CGRectDivide(_mainFrame, &part2, &_mainFrame, height, CGRectMaxYEdge);
+    CGRectDivide(_fullFrame, &part2, &_fullFrame, height, CGRectMaxYEdge);
     self.blueView = [[UIView alloc] initWithFrame:part2];
     self.blueView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:self.blueView];
     
-    CGRectDivide(_mainFrame, &part3, &_mainFrame, height, CGRectMaxYEdge);
+    CGRectDivide(_fullFrame, &part3, &_fullFrame, height, CGRectMaxYEdge);
     self.greenView = [[UIView alloc] initWithFrame:part3];
     self.greenView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.greenView];
     
-    CGRectDivide(_mainFrame, &part4, &_mainFrame, height, CGRectMaxYEdge);
+    CGRectDivide(_fullFrame, &part4, &_fullFrame, height, CGRectMaxYEdge);
     self.yellowView = [[UIView alloc] initWithFrame:part4];
     self.yellowView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.yellowView];

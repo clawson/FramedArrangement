@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic) CGRect mainFrame;
+@property (nonatomic) CGRect fullFrame;
 @property (nonatomic) CGFloat width;
 @property (nonatomic) CGFloat height;
 
