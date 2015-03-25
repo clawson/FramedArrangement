@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) UIView *redView;
+@property (nonatomic) UIView *blueView;
+@property (nonatomic) UIView *greenView;
+@property (nonatomic) UIView *yellowView;
 
 @end
 
