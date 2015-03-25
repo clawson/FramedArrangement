@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) CGRect mainFrame;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
+
 @property (nonatomic) UIView *redView;
 @property (nonatomic) UIView *blueView;
 @property (nonatomic) UIView *greenView;
